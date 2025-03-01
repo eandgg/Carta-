@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="container-letter">
+      <div class="cover"></div>
+      <span class="heart">♥</span>
+      <p class="paper" id="mainMessage">
+        Mi Greisse bella, te amo con todo mi corazón, con mi alma, y ser de carne y hueso. 
+      </p>
+      <div class="letter"></div>
+    </div>
+    <div class="options">
+      <button id="open">Abrir</button>
+      <button id="close">Cerrar</button>
+    </div>
+  </main>
+
+  <!-- Audio que se reproduce automáticamente -->
+  <audio id="loveSong" src="Karen O- igloo.mp3"></audio>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('open').addEventListener('click', function() {
+      let audio = document.getElementById('loveSong');
+      audio.play();
+    });
+
+    document.getElementById('close').addEventListener('click', function() {
+      let audio = document.getElementById('loveSong');
+      audio.pause();
+      audio.currentTime = 0; // Reiniciar la canción
+    });
+  </script>
+</body>
+</html>
